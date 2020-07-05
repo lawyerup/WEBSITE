@@ -10,6 +10,8 @@
   padding-top: 5%;
   padding-left: 5%;
   padding-right: 5%;
+  box-shadow: 0 0 5px 5px black;
+  position: relative;
 }
 
 #join > h1 {

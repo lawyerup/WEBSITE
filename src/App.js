@@ -1,13 +1,14 @@
 import React, { Fragment } from "react";
 import "./App.css";
 
-import Navigation from "./Components/Navigation/Navigation";
-import Landing from "./Components/Landing/Landing";
-import Story from "./Components/Story/Story";
-import Team from "./Components/Team/Team";
-import Reviews from "./Components/Reviews/Reviews";
-import Programs from "./Components/Programs/Programs";
-import Join from "./Components/Join/Join";
+import Navigation from "./Sections/Navigation/Navigation";
+import Landing from "./Sections/Landing/Landing";
+import Story from "./Sections/Story/Story";
+import Affiliates from "./Sections/Affiliates/Affiliates";
+import Team from "./Sections/Team/Team";
+import Reviews from "./Sections/Reviews/Reviews";
+import Programs from "./Sections/Programs/Programs";
+import Join from "./Sections/Join/Join";
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
       <main>
         <Landing />
         <Story />
+        <Affiliates />
         <Team />
         <Reviews />
         <Programs />
