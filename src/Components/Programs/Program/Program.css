@@ -1,0 +1,63 @@
+.program {
+  font-family: "Avenir", sans-serif;
+  transition: background-size 0.5s ease-in-out;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 30vw;
+  flex-basis: 33%;
+  background-size: 400%;
+  color: white;
+  font-size: 3vw;
+  outline: none;
+  border: none;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 3% 2% 2% 2%;
+}
+
+.program:hover {
+  cursor: pointer;
+  background-size: 200%;
+}
+
+.program > .description {
+  transition: color 0.5s ease-in-out, font-size 0.5s ease-in-out;
+  color: transparent;
+  font-size: 0vw;
+  pointer-events: none;
+  text-align: left;
+  align-items: center;
+  justify-content: top;
+}
+
+.program > .indicator, .program > i {
+  transition: color 0.5s ease-in-out, font-size 0.5s ease-in-out;
+  font-size: 1vw;
+  display: flex;
+  align-items: center;
+  color: white;
+  pointer-events: none;
+}
+
+@media screen and (max-width: 1000px) {
+    .program {
+      width: 75%;
+      background-size: 100%;
+    }
+
+    .program:hover {
+      background-size: 100%;
+    }
+
+    .program > .indicator {
+        font-size: 2vw;
+    }
+
+    .program > .description {
+        font-size: 1vw;
+    }
+  }

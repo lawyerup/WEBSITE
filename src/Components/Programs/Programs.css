@@ -1,0 +1,34 @@
+#programs {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: black;
+  font-family: "Avenir", sans-serif;
+  padding: 5% 0;
+  background-image: url(../Team/team.png);
+  background-size: 100%;
+  box-shadow: 0 0 5px 5px black;
+  position: relative;
+}
+
+#programs > h1 {
+  color: white;
+  flex-basis: 20%;
+  font-size: 3.5vw;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+#programs > .list {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 95%;
+}
+
+@media screen and (max-width: 1000px) {
+  #programs > .list {
+    flex-direction: column;
+  }
+}
