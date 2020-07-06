@@ -1,12 +1,3 @@
-@keyframes scroll {
-  0% {
-    transform: translateX(0);
-  }
-  100% {
-    transform: translateX(calc(-250px * 7));
-  }
-}
-
 .marquee {
   overflow: hidden;
   position: relative;
@@ -25,7 +16,7 @@
 .marquee::before,
 .marquee::after {
   content: "";
-  height: 100px;
+  height: 5vw;
   position: absolute;
   width: 10vw;
   z-index: 2;
@@ -43,19 +34,20 @@
 }
 
 .marquee > .slide-track {
-  animation: scroll 40s linear infinite;
   display: flex;
-  width: calc(250px * 14);
-  height: 100px;
-  align-items: center;
+  height: 5vw;
+  width: 100%;
+  background-color: yellow;
+  margin: 0;
+  padding: 0;
 }
 
 .marquee > .slide-track > .slide {
-  height: 100px;
-  width: 250px;
+  height: 5vw;
 }
 
-.marquee > .slide-track > slide > img {
+.marquee > .slide-track > .slide > img {
   pointer-events: none;
   user-select: none;
+  height: 5vw;
 }
