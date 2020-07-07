@@ -6,7 +6,7 @@ function Review({review}) {
   return (
     <Fragment>
       <div id={"review" + review.id} class="review">
-        <img src={profile} />
+        <img src={review.image} />
         <p>{review.text}</p>
         <label>
           {review.name} (LawyerUp '{review.year})

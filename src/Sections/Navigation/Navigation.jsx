@@ -10,6 +10,7 @@ function Navigation() {
         </a>
         <div className="menu">
           <a href="#story">Our Story</a>
+          <a href="#story">Our Partners</a>
           <a href="#team">Our Team</a>
           <a href="#reviews">Our Reviews</a>
           <a href="#programs">Our Programs</a>

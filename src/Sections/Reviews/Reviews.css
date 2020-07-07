@@ -8,6 +8,8 @@
   background-attachment: fixed;
   background-size: 100%;
   padding: 5% 0;
+  box-shadow: 0 0 5px 5px black;
+  position: relative;
 }
 
 #reviews > h1 {

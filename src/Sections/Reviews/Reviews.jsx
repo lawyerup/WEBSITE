@@ -5,11 +5,7 @@ import Review from "./Review/Review";
 import { UserReviews } from "./data.tsx";
 
 function Reviews() {
-  const reivewList = UserReviews.map((s) => {
-    return s + "<br></br>";
-  });
-
-  const reviewsList = UserReviews.map((r) => {
+  const reviewList = UserReviews.map((r) => {
     return <Review review={r} />;
   });
 
@@ -45,7 +41,7 @@ function Reviews() {
             chevron_left
           </button>
           <div id="brett" className="carousel">
-            {reviewsList}
+            {reviewList}
           </div>
           <button onClick={moveRight} className="material-icons">
             chevron_right

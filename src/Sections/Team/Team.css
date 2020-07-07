@@ -8,8 +8,6 @@
   background-attachment: fixed;
   font-family: "Avenir", sans-serif;
   padding: 5%;
-  box-shadow: 0 0 5px 5px black;
-  position: relative;
 }
 
 #team > h1 {

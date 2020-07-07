@@ -3,6 +3,7 @@ interface Review {
   name: String;
   year: String;
   id: String;
+  image: String;
 }
 
 export const UserReviews: Review[] = [
@@ -12,6 +13,8 @@ export const UserReviews: Review[] = [
     name: "Rhea Kamath",
     year: "20",
     id: "1",
+    image:
+      "https://media-exp1.licdn.com/dms/image/C5603AQGhc7zMI6IgpA/profile-displayphoto-shrink_400_400/0?e=1599696000&v=beta&t=oT6rni5HFE6cqR1MVIg6weMHQ3FeoAmfYb6WGa7lqaM",
   },
   {
     text:
@@ -19,6 +22,8 @@ export const UserReviews: Review[] = [
     name: "Anushka Gupta",
     year: "20",
     id: "2",
+    image:
+      "https://media-exp1.licdn.com/dms/image/C5603AQGhc7zMI6IgpA/profile-displayphoto-shrink_400_400/0?e=1599696000&v=beta&t=oT6rni5HFE6cqR1MVIg6weMHQ3FeoAmfYb6WGa7lqaM",
   },
   {
     text:
@@ -26,6 +31,8 @@ export const UserReviews: Review[] = [
     name: "Cassidi Mignoulo",
     year: "20",
     id: "3",
+    image:
+      "https://media-exp1.licdn.com/dms/image/C5603AQGhc7zMI6IgpA/profile-displayphoto-shrink_400_400/0?e=1599696000&v=beta&t=oT6rni5HFE6cqR1MVIg6weMHQ3FeoAmfYb6WGa7lqaM",
   },
   {
     text:
@@ -33,6 +40,8 @@ export const UserReviews: Review[] = [
     name: "Cynthia Vitolo",
     year: "20",
     id: "4",
+    image:
+      "https://media-exp1.licdn.com/dms/image/C5603AQGhc7zMI6IgpA/profile-displayphoto-shrink_400_400/0?e=1599696000&v=beta&t=oT6rni5HFE6cqR1MVIg6weMHQ3FeoAmfYb6WGa7lqaM",
   },
   {
     text:
@@ -40,6 +49,8 @@ export const UserReviews: Review[] = [
     name: "Galila Assefa",
     year: "20",
     id: "5",
+    image:
+      "https://media-exp1.licdn.com/dms/image/C5603AQGhc7zMI6IgpA/profile-displayphoto-shrink_400_400/0?e=1599696000&v=beta&t=oT6rni5HFE6cqR1MVIg6weMHQ3FeoAmfYb6WGa7lqaM",
   },
   {
     text:
@@ -47,6 +58,8 @@ export const UserReviews: Review[] = [
     name: "Linjing Yu",
     year: "20",
     id: "6",
+    image:
+      "https://media-exp1.licdn.com/dms/image/C5603AQGhc7zMI6IgpA/profile-displayphoto-shrink_400_400/0?e=1599696000&v=beta&t=oT6rni5HFE6cqR1MVIg6weMHQ3FeoAmfYb6WGa7lqaM",
   },
   {
     text:
@@ -54,6 +67,8 @@ export const UserReviews: Review[] = [
     name: "Daisy Garcia",
     year: "20",
     id: "7",
+    image:
+      "https://media-exp1.licdn.com/dms/image/C5603AQGhc7zMI6IgpA/profile-displayphoto-shrink_400_400/0?e=1599696000&v=beta&t=oT6rni5HFE6cqR1MVIg6weMHQ3FeoAmfYb6WGa7lqaM",
   },
   {
     text:
@@ -61,6 +76,8 @@ export const UserReviews: Review[] = [
     name: "Zaquariya Patterson",
     year: "20",
     id: "8",
+    image:
+      "https://media-exp1.licdn.com/dms/image/C5603AQGhc7zMI6IgpA/profile-displayphoto-shrink_400_400/0?e=1599696000&v=beta&t=oT6rni5HFE6cqR1MVIg6weMHQ3FeoAmfYb6WGa7lqaM",
   },
   {
     text:
@@ -68,6 +85,8 @@ export const UserReviews: Review[] = [
     name: "Hesham Akhoon",
     year: "20",
     id: "9",
+    image:
+      "https://media-exp1.licdn.com/dms/image/C5603AQGhc7zMI6IgpA/profile-displayphoto-shrink_400_400/0?e=1599696000&v=beta&t=oT6rni5HFE6cqR1MVIg6weMHQ3FeoAmfYb6WGa7lqaM",
   },
   {
     text:
@@ -75,5 +94,7 @@ export const UserReviews: Review[] = [
     name: "Hesham Akhoon",
     year: "20",
     id: "10",
+    image:
+      "https://media-exp1.licdn.com/dms/image/C5603AQGhc7zMI6IgpA/profile-displayphoto-shrink_400_400/0?e=1599696000&v=beta&t=oT6rni5HFE6cqR1MVIg6weMHQ3FeoAmfYb6WGa7lqaM",
   },
 ];
