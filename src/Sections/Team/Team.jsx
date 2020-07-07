@@ -1,7 +1,7 @@
 import React, { Fragment } from "react";
 import "./Team.css";
 
-import map from "./map.svg"
+import Map from "./map.jsx";
 
 function Team() {
   return (
@@ -9,7 +9,9 @@ function Team() {
       <div id="team">
         <h1>Our Team</h1>
         <h2>Interact with the map to meet our Continental Directors</h2>
-        <img src={map}/>
+        <div className="mapper">
+          <Map />
+        </div>
       </div>
     </Fragment>
   );
