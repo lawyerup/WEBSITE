@@ -1,7 +1,7 @@
 .marquee {
-  overflow: hidden;
   position: relative;
   width: 100vw;
+  overflow: hidden;
 }
 
 .marquee > h1 {
@@ -16,7 +16,7 @@
 .marquee::before,
 .marquee::after {
   content: "";
-  height: 5vw;
+  height: 100px;
   position: absolute;
   width: 10vw;
   z-index: 2;
@@ -34,20 +34,24 @@
 }
 
 .marquee > .slide-track {
+  background-color: white;
   display: flex;
-  height: 5vw;
-  width: 100%;
-  background-color: yellow;
+  flex-direction: row;
+  height: 100px;
+  width: 100vw;
   margin: 0;
   padding: 0;
 }
 
 .marquee > .slide-track > .slide {
-  height: 5vw;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  min-width: 250px;
 }
 
 .marquee > .slide-track > .slide > img {
   pointer-events: none;
   user-select: none;
-  height: 5vw;
+  height: 100%;
 }

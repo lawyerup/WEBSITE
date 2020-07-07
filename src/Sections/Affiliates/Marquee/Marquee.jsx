@@ -6,7 +6,7 @@ import "./Marquee.css";
 function Marquee({ title, items }) {
   var slides = items.map((i) => (
     <Fragment>
-      <div class="slide">
+      <div className="slide">
         <img src={i.image} alt={i.name} />
       </div>
     </Fragment>
@@ -17,21 +17,22 @@ function Marquee({ title, items }) {
     transform: translateX(0);
   }
   100% {
-    transform: translateX(calc(-10vw * ${slides.length}));
+    transform: translateX(calc(${-250 * slides.length}px));
   }
   `;
 
   const Scroll = styled.div`
-    animation: ${scroll} ${slides.length >= 7 ? 20 : 0}s linear infinite;
-    width: calc(-10vw * ${slides.length * 2});
-    ${slides.length <= 7 ? `justify-content: center;` : ""}
+    animation: ${scroll} 10s linear infinite;
+    animation-play-state: ${slides.length < 3 ? "paused" : "running"};
+    justify-content: ${slides.length < 3 ? "center" : "flex-start"};
+    width: calc(${250 * slides.length * 2}px);
   `;
 
   return (
     <Fragment>
       <div className={"marquee"}>
         <h1>{title}</h1>
-        <Scroll className="slide-track">{slides}{slides}</Scroll>
+        <Scroll className="slide-track">{slides}{slides}{slides}{slides}</Scroll>
       </div>
     </Fragment>
   );
