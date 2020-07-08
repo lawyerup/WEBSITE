@@ -25,6 +25,52 @@
   text-align: center;
 }
 
-#team > .mapper {
-  width: 80vw;
+#team > svg:hover {
+  cursor: pointer;
+}
+
+#team > svg path {
+  transition: fill 0.5s ease-in-out;
+  fill: white;
+}
+
+#team > #panel-right {
+  visibility: hidden;
+  background-color: #881103;
+  display: flex;
+  position: absolute;
+  flex-direction: column;
+  left: 5vw;
+  width: 40vw;
+  border-radius: 1vw;
+  overflow: hidden;
+  color: white;
+  box-shadow: 0 0 5px 5px #202020;
+}
+
+#team > #panel-right > .member {
+  flex-direction: row;
+  display: flex;
+}
+
+#team > #panel-right > .member > img {
+  width: 10vw;
+  margin-right: 10px;
+}
+
+#team > #panel-right > .member > .content {
+  flex-direction: column;
+  display: flex;
+  padding: 0 5px;
+  justify-content: center;
+}
+
+#team > #panel-right > .member > .content > h1 {
+  font-size: 2vw;
+  margin: 0;
+}
+
+#team > #panel-right > .member > .content > label {
+  font-size: 0.75vw;
+  margin: 0;
 }
