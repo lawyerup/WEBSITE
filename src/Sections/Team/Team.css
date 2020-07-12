@@ -25,6 +25,30 @@
   text-align: center;
 }
 
-#team > img {
-  width: 80vw;
+#team > svg:hover {
+  cursor: pointer;
+}
+
+#team > svg path {
+  transition: fill 0.5s ease-in-out;
+  fill: white;
+  stroke: transparent;
+  stroke-width: 20px;
+}
+
+#team #bigMap {
+  transform: matrix(1.25, 0, 0, -1.25, 0, 625.25) scale(calc(0.5), calc(0.5));
+}
+
+@media screen and (max-width: 1000px) {
+  #team svg {
+    background-color: tomato;
+    width: 472.5px;
+    height: 281.3625px;
+  }
+
+  #team #bigMap {
+    transform: matrix(1.25, 0, 0, -1.25, 0, 281.3625)
+      scale(0.225);
+  }
 }

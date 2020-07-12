@@ -1,6 +1,5 @@
 import React, { Fragment } from "react";
 import "./Review.css";
-import profile from "./profile.jpeg"
 
 function Review({review}) {
   return (
