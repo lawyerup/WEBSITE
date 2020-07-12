@@ -5,6 +5,7 @@ import naima_ali from "./Images/naima_ali.jpeg";
 import irene_ouyang from "./Images/irene_ouyang.jpeg";
 import yashica_kataria from "./Images/yashica_kataria.jpeg";
 import stacey_adongo from "./Images/stacey_adongo.jpeg";
+import { useContext } from "react";
 
 export const team = {
   europe: [
@@ -21,7 +22,7 @@ export const team = {
         "I’m Naima Ali, one of the directors of LawyerUp in Europe. I will be going into my first year of studying Politics, Philosophy & Law (LLB) at King’s College London this September, with the aspiration of becoming a solicitor. Through LawyerUp, I hope to develop my knowledge of different areas of law - the broader and the more narrower. But I’m most excited to work with others and for others to help them get the experience they need to succeed. Feel free to reach out!",
     },
   ],
-  america: [
+  northAmerica: [
     {
       image: haby_sondo,
       name: "Haby Sondo",

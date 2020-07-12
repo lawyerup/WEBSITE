@@ -10,13 +10,16 @@ import {
   locations,
 } from "./map_locations";
 
+import Panel from "./Panel/Panel";
+import { team } from "./data";
+
 function Map() {
   const dot =
     "m 0,0 c 0,-2.945 -2.388,-5.333 -5.333,-5.333 -2.945,0 -5.333,2.388 -5.333,5.333 0,2.945 2.388,5.333 5.333,5.333 C -2.388,5.333 0,2.945 0,0";
 
   const northAmericaMap = northAmerica.map((d) => (
     <path
-      name="northAmerica"
+      name="northamerica"
       transform={"translate(" + d.x + "," + d.y + ")"}
       d={dot}
     />
@@ -24,7 +27,7 @@ function Map() {
 
   const southAmericaMap = southAmerica.map((d) => (
     <path
-      name="southAmerica"
+      name="southamerica"
       transform={"translate(" + d.x + "," + d.y + ")"}
       d={dot}
     />
@@ -62,24 +65,52 @@ function Map() {
     />
   ));
 
-  function highlightContinent(continent, color) {
-    var dots = document.getElementsByName(continent.id);
+  var selectedContinent = "";
 
-    if (!continent.value) {
+  function highlightContinent(id, color, force) {
+    if (selectedContinent == "") {
+      var dots = document.getElementsByName(id);
+
       for (const [index, value] of dots.entries()) {
-        value.style.transitionDelay = color == "white" ? "1s" : "0s";
         value.style.fill = color;
       }
     }
-
-    var panel = document.getElementById("panel-right");
   }
 
-  function selectContinent(continent) {
-    var dots = document.getElementsByName(continent.id);
+  function selectContinent(id) {
+    var oldId = selectedContinent;
+    selectedContinent = id;
+
+    highlightContinent(id, "#881103");
+    highlightContinent(oldId, "white");
+
+    presentPanel(id);
+  }
+
+  function presentPanel(id) {
+    var panel = document.getElementById(id + "Panel");
+    panel.getElementsByTagName("button")[0].onclick = function () {
+      hidePanel(id, panel);
+    };
+
+    panel.style.visibility = "visible";
+    window.setTimeout(function () {
+      panel.style.opacity = "1";
+    }, 500);
+  }
+
+  function hidePanel(id, panel) {
+    panel.style.opacity = "0";
+    window.setTimeout(function () {
+      panel.style.visibility = "hidden";
+    }, 500);
+
+    var dots = document.getElementsByName(id);
     for (const [index, value] of dots.entries()) {
-      value.style.fill = "#881103";
+      value.style.transitionDelay = "0s";
+      value.style.fill = "white";
     }
+    selectedContinent = "";
   }
 
   return (
@@ -90,53 +121,50 @@ function Map() {
       width="1050"
       height="626.25"
     >
-      <g
-        fill="white"
-        transform={"matrix(1.25,0,0,-1.25,0,625.25) scale(0.5, 0.5)"}
-      >
+      <g fill="white" id="bigMap">
         <g
-          id="northAmerica"
-          onMouseEnter={(e) => highlightContinent(e.currentTarget, "#881103")}
-          onMouseLeave={(e) => highlightContinent(e.currentTarget, "white")}
-          onClick={(e) => selectContinent(e.currentTarget)}
+          id={"northamerica"}
+          onMouseEnter={(e) =>
+            highlightContinent(e.currentTarget.id, "#881103")
+          }
+          onMouseLeave={(e) => highlightContinent(e.currentTarget.id, "white")}
+          onClick={(e) => selectContinent(e.currentTarget.id)}
         >
           {northAmericaMap}
         </g>
-        <g
-          id="southAmerica"
-          onMouseEnter={(e) => highlightContinent(e.currentTarget, "#881103")}
-          onMouseLeave={(e) => highlightContinent(e.currentTarget, "white")}
-        >
-          {southAmericaMap}
-        </g>
+
+        <g id="southamerica">{southAmericaMap}</g>
         <g
           id="europe"
-          onMouseEnter={(e) => highlightContinent(e.currentTarget, "#881103")}
-          onMouseLeave={(e) => highlightContinent(e.currentTarget, "white")}
+          onMouseEnter={(e) =>
+            highlightContinent(e.currentTarget.id, "#881103")
+          }
+          onMouseLeave={(e) => highlightContinent(e.currentTarget.id, "white")}
+          onClick={(e) => selectContinent(e.currentTarget.id)}
         >
           {europeMap}
         </g>
         <g
           id="asia"
-          onMouseEnter={(e) => highlightContinent(e.currentTarget, "#881103")}
-          onMouseLeave={(e) => highlightContinent(e.currentTarget, "white")}
+          onMouseEnter={(e) =>
+            highlightContinent(e.currentTarget.id, "#881103")
+          }
+          onMouseLeave={(e) => highlightContinent(e.currentTarget.id, "white")}
+          onClick={(e) => selectContinent(e.currentTarget.id)}
         >
           {asiaMap}
         </g>
         <g
           id="africa"
-          onMouseEnter={(e) => highlightContinent(e.currentTarget, "#881103")}
-          onMouseLeave={(e) => highlightContinent(e.currentTarget, "white")}
+          onMouseEnter={(e) =>
+            highlightContinent(e.currentTarget.id, "#881103")
+          }
+          onMouseLeave={(e) => highlightContinent(e.currentTarget.id, "white")}
+          onClick={(e) => selectContinent(e.currentTarget.id)}
         >
           {africaMap}
         </g>
-        <g
-          id="australia"
-          onMouseEnter={(e) => highlightContinent(e.currentTarget, "#881103")}
-          onMouseLeave={(e) => highlightContinent(e.currentTarget, "white")}
-        >
-          {australiaMap}
-        </g>
+        <g id="australia">{australiaMap}</g>
       </g>
     </svg>
   );

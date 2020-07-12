@@ -32,45 +32,23 @@
 #team > svg path {
   transition: fill 0.5s ease-in-out;
   fill: white;
+  stroke: transparent;
+  stroke-width: 20px;
 }
 
-#team > #panel-right {
-  visibility: hidden;
-  background-color: #881103;
-  display: flex;
-  position: absolute;
-  flex-direction: column;
-  left: 5vw;
-  width: 40vw;
-  border-radius: 1vw;
-  overflow: hidden;
-  color: white;
-  box-shadow: 0 0 5px 5px #202020;
+#team #bigMap {
+  transform: matrix(1.25, 0, 0, -1.25, 0, 625.25) scale(calc(0.5), calc(0.5));
 }
 
-#team > #panel-right > .member {
-  flex-direction: row;
-  display: flex;
-}
+@media screen and (max-width: 1000px) {
+  #team svg {
+    background-color: tomato;
+    width: 472.5px;
+    height: 281.3625px;
+  }
 
-#team > #panel-right > .member > img {
-  width: 10vw;
-  margin-right: 10px;
-}
-
-#team > #panel-right > .member > .content {
-  flex-direction: column;
-  display: flex;
-  padding: 0 5px;
-  justify-content: center;
-}
-
-#team > #panel-right > .member > .content > h1 {
-  font-size: 2vw;
-  margin: 0;
-}
-
-#team > #panel-right > .member > .content > label {
-  font-size: 0.75vw;
-  margin: 0;
+  #team #bigMap {
+    transform: matrix(1.25, 0, 0, -1.25, 0, 281.3625)
+      scale(0.225);
+  }
 }

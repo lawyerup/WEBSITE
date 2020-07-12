@@ -4,26 +4,19 @@ import "./Team.css";
 import Map from "./map.jsx";
 import { team } from "./data.jsx";
 
-function Team() {
-  const members = team.asia.map((t) => (
-    <Fragment>
-      <div className="member">
-        <img src={t.image} alt="test" />
-        <div className="content">
-          <h1>{t.name}</h1>
-          <label>{t.bio}</label>
-        </div>
-      </div>
-    </Fragment>
-  ));
+import Panel from "./Panel/Panel";
 
+function Team() {
   return (
     <Fragment>
       <div id="team">
         <h1>Our Team</h1>
         <h2>Interact with the map to meet our Continental Directors</h2>
         <Map />
-        <div id="panel-right">{members}</div>
+        <Panel continent={"Asia"} directors={team.asia} />
+        <Panel continent={"Africa"} directors={team.africa} />
+        <Panel continent={"Europe"} directors={team.europe} />
+        <Panel continent={"North America"} directors={team.northAmerica} />
       </div>
     </Fragment>
   );
