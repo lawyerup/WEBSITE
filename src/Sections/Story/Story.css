@@ -19,7 +19,7 @@
 }
 
 #story > p {
-  font-size: max(1.5vw, 4vh);
+  font-size: 2vw;
   flex-basis: 70%;
   text-align: justify;
   text-align-last: left;
