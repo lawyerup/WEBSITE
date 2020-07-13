@@ -1,8 +1,6 @@
 import React, { Fragment } from "react";
 import "./Panel.css";
 
-import Map from "../map";
-
 function Panel({ continent, directors }) {
   const id = continent.toLowerCase().replace(/\s/g, "") + "Panel";
   const directorList = directors.map((d) => (
