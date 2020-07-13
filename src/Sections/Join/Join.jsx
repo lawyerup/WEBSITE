@@ -3,7 +3,9 @@ import "./Join.css";
 
 import icon_linkedin from "./icon_linkedin.svg";
 import icon_instagram from "./icon_instagram.svg";
+import icon_facebook from "./icon_facebook.svg";
 import icon_email from "./icon_email.svg";
+import icon_law from "./icon_law.svg";
 
 function Join() {
   const [form, setForm] = useState({
@@ -145,26 +147,62 @@ function Join() {
               value={form.message.text}
               onChange={validateMessage}
             />
-            <label id="messageError">Please enter a message</label>
-            <button type="submit">Send</button>
+            <label id={"messageError"}>Please enter a message</label>
+            <button type={"submit"}>Send</button>
           </form>
           <div className="links">
-            <a href="mailto:lawyerupinternship@gmail.com">
-              <img src={icon_email} alt="logo" /> lawyerupinternship@gmail.com
+            <a href={"mailto:lawyerupinternship@gmail.com"} target={"_blank"}>
+              <img src={icon_email} alt={"email"} />{" "}
+              lawyerupinternship@gmail.com
             </a>
-            <a href="https://www.instagram.com/lawyerupinternship/?hl=en">
-              <img src={icon_instagram} alt="logo" /> @lawyerupinternship
+            <a
+              href={"https://www.instagram.com/lawyerupinternship/?hl=en"}
+              target={"_blank"}
+            >
+              <img src={icon_instagram} alt={"instagram"} /> @lawyerupinternship
             </a>
-            <a href="http://www.linkedin.com/company/lawyerupinternship">
-              <img src={icon_linkedin} alt="logo" />
+            <a
+              href={"http://www.linkedin.com/company/lawyerupinternship"}
+              target={"_blank"}
+            >
+              <img src={icon_linkedin} alt={"linkedin"} />
               @LawyerUpInternship
             </a>
-            <a>Apply to be an Intern or Scholar here!</a>
+            <a
+              href={"https://www.facebook.com/lawyerupinternship"}
+              target={"_blank"}
+            >
+              <img src={icon_facebook} alt={"facebook"} />
+              @lawyerupinternship
+            </a>
+            <a>
+              <img src={icon_law} alt={"apply"} />
+              Apply to be an Intern or Scholar here!
+            </a>
           </div>
         </div>
         <footer>
-          Copyright &copy; 2020 LawyerUp | Developed by Brett Severin, Umeesha
-          D'Alwis, and Deepanshu Gupta
+          Copyright &copy; 2020 LawyerUp | Developed by&nbsp;
+          <a
+            href={"https://www.linkedin.com/in/umeeshadalwis/"}
+            target={"_blank"}
+          >
+            Umeesha D'Alwis
+          </a>
+          ,&nbsp;
+          <a
+            href={"https://www.linkedin.com/in/brettseverin/"}
+            target={"_blank"}
+          >
+            Brett Severin
+          </a>
+          ,&nbsp;
+          <a
+            href={"https://www.linkedin.com/in/deepanshug4/"}
+            target={"_blank"}
+          >
+            Deepanshu Gupta
+          </a>
         </footer>
       </div>
     </Fragment>
