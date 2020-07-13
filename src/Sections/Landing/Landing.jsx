@@ -1,7 +1,7 @@
 import React, { Fragment, useState } from "react";
 import "./Landing.css";
 
-import logo from "./logo.svg";
+import logo from "../../Images/logos/lawyerUpLogo.svg";
 
 function Landing() {
   var slogan = "the legal internship you've been waiting for".split("");
