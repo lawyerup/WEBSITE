@@ -1,10 +1,10 @@
-import christopher_antunes from "./Images/christopher_antunes.jpeg";
-import haby_sondo from "./Images/haby_sondo.jpeg";
-import naima_ali from "./Images/naima_ali.jpeg";
-// import gagan_kaur from "./Images/gagan_kaur.jpeg";
-import irene_ouyang from "./Images/irene_ouyang.jpeg";
-import yashica_kataria from "./Images/yashica_kataria.jpeg";
-import stacey_adongo from "./Images/stacey_adongo.png";
+import christopher_antunes from "../../Images/people/christopher_antunes.jpeg";
+import haby_sondo from "../../Images/people/haby_sondo.jpeg";
+import naima_ali from "../../Images/people/naima_ali.jpeg";
+// import gagan_kaur from "../../Images/people/gagan_kaur.jpeg";
+import irene_ouyang from "../../Images/people/irene_ouyang.jpeg";
+import yashica_kataria from "../../Images/people/yashica_kataria.jpeg";
+import stacey_adongo from "../../Images/people/stacey_adongo.png";
 import { useContext } from "react";
 
 export const team = {
