@@ -1,13 +1,13 @@
-import anushka_gupta from "./Images/anushka_gupta.png";
-import cassidi_mignuolo from "./Images/cassidi_mignuolo.jpeg";
-import rhae_kamath from "./Images/rhae_kamath.jpeg";
-import cynthia_vitolo from "./Images/cynthia_vitolo.jpeg";
-import daisy_garcia from "./Images/daisy_garcia.jpeg";
-import galila_assefa from "./Images/galila_assefa.jpeg";
-import hesham_akhoon from "./Images/hesham_akhoon.jpeg";
-import karishma_khosla from "./Images/karishma_khosla.png";
-import linjing_yu from "./Images/linjing_yu.jpeg";
-import zaquariya_patterson from "./Images/zaquariya_patterson.jpeg"
+import anushka_gupta from "../../Images/people/anushka_gupta.png";
+import cassidi_mignuolo from "../../Images/people/cassidi_mignuolo.jpeg";
+import rhae_kamath from "../../Images/people/rhae_kamath.jpeg";
+import cynthia_vitolo from "../../Images/people/cynthia_vitolo.jpeg";
+import daisy_garcia from "../../Images/people/daisy_garcia.jpeg";
+import galila_assefa from "../../Images/people/galila_assefa.jpeg";
+import hesham_akhoon from "../../Images/people/hesham_akhoon.jpeg";
+import karishma_khosla from "../../Images/people/karishma_khosla.png";
+import linjing_yu from "../../Images/people/linjing_yu.jpeg";
+import zaquariya_patterson from "../../Images/people/zaquariya_patterson.jpeg"
 
 interface Review {
   text: String;

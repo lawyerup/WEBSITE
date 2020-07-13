@@ -1,11 +1,11 @@
 import React, { Fragment, useState } from "react";
 import "./Join.css";
 
-import icon_linkedin from "./icon_linkedin.svg";
-import icon_instagram from "./icon_instagram.svg";
-import icon_facebook from "./icon_facebook.svg";
-import icon_email from "./icon_email.svg";
-import icon_law from "./icon_law.svg";
+import icon_linkedin from "../../Images/icons/icon_linkedin.svg";
+import icon_instagram from "../../Images/icons/icon_instagram.svg";
+import icon_facebook from "../../Images/icons/icon_facebook.svg";
+import icon_email from "../../Images/icons/icon_email.svg";
+import icon_law from "../../Images/icons/icon_law.svg";
 
 function Join() {
   const [form, setForm] = useState({

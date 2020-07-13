@@ -2,12 +2,12 @@ import React, { Fragment } from "react";
 import "./Programs.css";
 
 import Program from "./Program/Program";
-import Programs1 from "./programs1.png";
-import Programs2 from "./programs2.png";
+import Programs1 from "../../Images/backgrounds/programs1.png";
+import Programs2 from "../../Images/backgrounds/programs2.png";
+import Programs3 from "../../Images/backgrounds/programs3.png";
 import lawyerUpLogo from "../../Images/logos/lawyerUpLogo-white.svg";
 import scholarUpLogo from "../../Images/logos/scholarUpLogo-white.svg";
 import levelUpLogo from "../../Images/logos/levelUpLogo-white.svg";
-import Programs3 from "./programs3.png";
 
 function Programs() {
   const data = [

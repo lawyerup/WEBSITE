@@ -1,5 +1,5 @@
 #landing {
-  background-image: url(landing.jpg);
+  background-image: url(../../Images/backgrounds/landing.jpg);
   display: flex;
   flex-direction: column;
   align-items: center;

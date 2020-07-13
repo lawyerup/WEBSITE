@@ -3,7 +3,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
-  background-image: url("./join.png");
+  background-image: url("../../Images/backgrounds/join.png");
   background-size: 100%;
   background-attachment: fixed;
   font-family: "Avenir", sans-serif;
