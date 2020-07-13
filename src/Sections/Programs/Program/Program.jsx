@@ -1,54 +1,90 @@
 import React, { Fragment } from "react";
 import "./Program.css";
 
-function Program({ id, name, description, image }) {
+function Program({ id, name, description, image, logo, released, button }) {
   function showDetails() {
-    const description = document.getElementById(id + "description");
-    const indicator = document.getElementById(id + "indicator");
+    const title = document.getElementById(id + "Title").style;
+    const description = document.getElementById(id + "Description").style;
+    const indicator = document.getElementById(id + "Indicator").style;
+    const logo = document.getElementById(id + "Logo").style;
+    const more = document.getElementById(id + "More")?.style;
 
-    if (indicator.style.fontSize === "0vw") {
-      description.style.color = "transparent";
+    if (indicator.display !== "none") {
+      indicator.color = "transparent";
+      logo.opacity = "0";
       window.setTimeout(function () {
-        description.style.fontSize = "0vw";
-        description.style.display = "transparent";
-        indicator.style.display = "flex";
-        indicator.style.fontSize = window.innerWidth > 1000 ? "1vw" : "2vw";
+        indicator.display = "none";
+        logo.display = "none";
+        title.display = "flex";
+        description.display = "flex";
+        if (more) more.display = "flex";
       }, 500);
       window.setTimeout(function () {
-        indicator.style.color = "white";
+        title.color = "white";
+        description.color = "white";
+        if (more) more.opacity = "1";
       }, 1000);
     } else {
-      indicator.style.color = "transparent";
+      title.color = "transparent";
+      description.color = "transparent";
+      if (more) more.opacity = "0";
       window.setTimeout(function () {
-        indicator.style.fontSize = "0vw";
-        description.style.fontSize =
-          window.innerWidth > 1000 ? "1.5vw" : "2.5vw";
-        indicator.style.display = "none";
+        title.display = "none";
+        description.display = "none";
+        if (more) more.display = "none";
+        indicator.display = "flex";
+        logo.display = "flex";
       }, 500);
       window.setTimeout(function () {
-        description.style.color = "white";
+        indicator.color = "white";
+        logo.opacity = "1";
       }, 1000);
     }
   }
 
+  var indicator;
+  if (released) {
+    indicator = (
+      <label className="indicator" id={id + "Indicator"}>
+        <i className="material-icons">expand_more</i>
+        Click to view more information
+        <i className="material-icons">expand_more</i>
+      </label>
+    );
+  } else {
+    indicator = (
+      <label className="indicator" id={id + "Indicator"}>
+        Coming soon
+      </label>
+    );
+  }
+
+  var more;
+  if (button) {
+    more = (
+      <a href={button.link} className={"more"} id={id + "More"}>
+        {button.text}
+        <i className={"material-icons"}>arrow_forward</i>
+      </a>
+    );
+  }
+
   return (
     <Fragment>
-      <button
+      <div
         id={id}
         className="program"
-        onClick={showDetails}
+        onClick={released ? showDetails : ""}
         style={{ backgroundImage: "url(" + image + ")" }}
       >
-        {name}
-        <label className="description" id={id + "description"}>
+        <h1 id={id + "Title"}>{name}</h1>
+        <label className="description" id={id + "Description"}>
           {description}
         </label>
-        <label className="indicator" id={id + "indicator"}>
-          <i className="material-icons">expand_more</i>
-          Click to view more information{" "}
-          <i className="material-icons">expand_more</i>
-        </label>
-      </button>
+        <img id={id + "Logo"} src={logo} alt="" />
+        {more}
+        {indicator}
+      </div>
     </Fragment>
   );
 }

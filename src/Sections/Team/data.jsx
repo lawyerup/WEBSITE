@@ -4,7 +4,7 @@ import naima_ali from "./Images/naima_ali.jpeg";
 // import gagan_kaur from "./Images/gagan_kaur.jpeg";
 import irene_ouyang from "./Images/irene_ouyang.jpeg";
 import yashica_kataria from "./Images/yashica_kataria.jpeg";
-import stacey_adongo from "./Images/stacey_adongo.jpeg";
+import stacey_adongo from "./Images/stacey_adongo.png";
 import { useContext } from "react";
 
 export const team = {
