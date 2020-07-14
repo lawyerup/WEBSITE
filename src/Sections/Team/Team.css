@@ -47,6 +47,8 @@
   padding: 1% 2.5%;
   border-radius: 1vw;
   font-size: 1vw;
+  width: 15vw;
+  font-family: "Avenir", Arial;
 }
 
 #team > button:hover {
@@ -62,5 +64,9 @@
 
   #team #teamMap {
     transform: matrix(1.25, 0, 0, -1.25, 0, 281.3625) scale(0.225);
+  }
+
+  #team > button {
+    font-size: 2vw;
   }
 }
