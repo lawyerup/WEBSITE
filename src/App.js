@@ -9,6 +9,7 @@ import Team from "./Sections/Team/Team";
 import Reviews from "./Sections/Reviews/Reviews";
 import Programs from "./Sections/Programs/Programs";
 import Join from "./Sections/Join/Join";
+import SponsorPanel from "./Sections/SponsorPanel/SponsorPanel";
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
         <Reviews />
         <Programs />
         <Join />
+        <SponsorPanel />
       </main>
     </Fragment>
   );

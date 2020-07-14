@@ -50,7 +50,16 @@ nav > .menu > a {
 
 nav > .menu > a:hover {
     color: white;
+    cursor: pointer;
     background-color: #303030;
+}
+
+nav > .menu > a.sponsor {
+    background-color: maroon;
+}
+
+nav > .menu > a.sponsor:hover {
+    background-color: rgba(128, 0, 0, 0.5);
 }
 
 @media screen and (max-width: 600px) {

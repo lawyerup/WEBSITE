@@ -22,7 +22,7 @@ function Marquee({ title, items }) {
   `;
 
   const Scroll = styled.div`
-    animation: ${scroll} 10s linear infinite;
+    animation: ${scroll} 60s linear infinite;
     animation-play-state: ${slides.length < 3 ? "paused" : "running"};
     justify-content: ${slides.length < 3 ? "center" : "flex-start"};
     width: calc(${250 * slides.length * 2}px);

@@ -175,7 +175,12 @@ function Join() {
               <img src={icon_facebook} alt={"facebook"} />
               @lawyerupinternship
             </a>
-            <a>
+            <a
+              href={
+                "https://docs.google.com/forms/d/e/1FAIpQLSf7PuyTBlem4UNkDa4Bknb6cfiG0_JBUTns0S0pqmiSxeUflg/viewform"
+              }
+              target={"_blank"}
+            >
               <img src={icon_law} alt={"apply"} />
               Apply to be an Intern or Scholar here!
             </a>

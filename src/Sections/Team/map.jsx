@@ -116,12 +116,11 @@ function Map() {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
-      id="svg2"
       version="1.1"
       width="1050"
       height="626.25"
     >
-      <g fill="white" id="bigMap">
+      <g fill="white" id="teamMap">
         <g
           id={"northamerica"}
           onMouseEnter={(e) =>
