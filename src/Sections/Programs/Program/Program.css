@@ -27,7 +27,7 @@
 .program h1 {
   transition: color 0.5s ease-in-out, font-size 0.5s ease-in-out;
   margin: 0;
-  font-size: 3vw;
+  font-size: 2.5vw;
   font-weight: 400;
   color: transparent;
   display: none;
@@ -60,21 +60,28 @@
 }
 
 .program > .more {
-  transition: opacity 0.5s ease-in-out;
-  background-color: white;
-  top: 50px;
-  left: 50px;
-  color: black;
+  transition: background-color 0.5s ease-in-out;
+  background-color: transparent;
+  color: white;
   border-radius: 0.5vw;
+  border: 1px solid white;
+  background-color: #69252500;
   font-size: 1vw;
-  padding: 2% 5%;
+  padding: 1% 2.5%;
   display: none;
   opacity: 0;
   justify-content: space-between;
   align-items: center;
   width: 50%;
   text-decoration: none;
-  box-shadow: 0 0 5px 1px #202020;
+}
+
+.program > .more:hover {
+  background-color: #6925258f;
+}
+
+.program > .more > i {
+  font-size: inherit;
 }
 
 @media screen and (max-width: 1000px) {
@@ -100,6 +107,6 @@
   }
 
   .program > .more {
-    font-size: 2.5vw;
+    font-size: 1.5vw;
   }
 }

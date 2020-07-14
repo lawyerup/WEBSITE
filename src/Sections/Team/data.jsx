@@ -5,9 +5,18 @@ import gagan_kaur from "../../Images/people/gagan_kaur.png";
 import irene_ouyang from "../../Images/people/irene_ouyang.jpeg";
 import yashica_kataria from "../../Images/people/yashica_kataria.jpeg";
 import stacey_adongo from "../../Images/people/stacey_adongo.png";
+import umeesha_dalwis from "../../Images/people/umeesha_dalwis.jpeg";
 import { useContext } from "react";
 
 export const team = {
+  founder: [
+    {
+      image: umeesha_dalwis,
+      link: "https://www.linkedin.com/in/umeeshadalwis/",
+      name: "Umeesha D'Alwis",
+      bio: "I’m Umeesha D’Alwis, the founder of LawyerUp program. So many people ask me what prompted me to do this. Honestly? I was tired of fetching coffee, scanning copies, and printing documents. I knew I had more to offer the legal field but no one wanted to give me the opportunity. So, I decided to create an opportunity instead. With LawyerUp, our Interns meet with legal professionals from all over the world to really understand both the good and bad that the legal field has to offer. Reach out to me on LinkedIn. I’d love to meet you and help answer any questions you may have!",
+    }
+  ],
   europe: [
     {
       image: christopher_antunes,

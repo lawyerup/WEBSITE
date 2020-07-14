@@ -46,11 +46,12 @@
   height: 100%;
   display: flex;
   justify-content: center;
+  align-items: center;
   min-width: 250px;
 }
 
 .marquee > .slide-track > .slide > img {
   pointer-events: none;
   user-select: none;
-  height: 100%;
+  height: 90%;
 }
