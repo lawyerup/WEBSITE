@@ -6,7 +6,7 @@ import { UserReviews } from "./data.tsx";
 
 function Reviews() {
   const reviewList = UserReviews.map((r) => {
-    return <Review review={r} />;
+    return <Review key={r.name} review={r} />;
   });
 
   var pivot = 2;

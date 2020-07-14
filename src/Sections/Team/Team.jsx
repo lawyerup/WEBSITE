@@ -30,9 +30,9 @@ function Team() {
     <Fragment>
       <div id="team">
         <h1>Our Team</h1>
-        <h2>Interact with the map to meet our Continental Directors</h2>
+        <h2>Interact with our map to meet our Continental Directors</h2>
         <Map />
-        <button onClick={presentPanel}>Meet the founder</button>
+        <button onClick={presentPanel}>Meet the Founder</button>
         <Panel continent={"Asia"} directors={team.asia} />
         <Panel continent={"Africa"} directors={team.africa} />
         <Panel continent={"Europe"} directors={team.europe} />

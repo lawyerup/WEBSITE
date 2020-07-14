@@ -26,15 +26,12 @@ if ($_SERVER['REQUEST_METHOD'] === "POST") {
   if (empty($errors)) {
     $date = date('j, F Y h:i A');
     
-    $logo = 
-
     $emailBody = "
     <html>
     <head>
     <title>$email is contacting you</title>
     </head>
     <body style=\"background-color:#fafafa;\">
-    <img src='./google.png' />
     <div style=\"padding:20px;\">
     Date: <span style=\"color:#888\">$date</span>
     <br>
@@ -45,14 +42,14 @@ if ($_SERVER['REQUEST_METHOD'] === "POST") {
     </body>
     </html>
     ";
-
-    $headers = 	'From: Contact Form <brett7everin@gmail.com>' . "\r\n" .
+    
+    $headers = 	'From: Contact Form <contact@mydomain.com>' . "\r\n" .
     "Reply-To: $email" . "\r\n" .
     "MIME-Version: 1.0\r\n" . 
     "Content-Type: text/html; charset=iso-8859-1\r\n";
 
     $to = 'brett7everin@gmail.com';
-    $subject = 'Message from LawyerUp!';
+    $subject = 'Contacting you';
     
     if (mail($to, $subject, $emailBody, $headers)) {
       $sent = true;	

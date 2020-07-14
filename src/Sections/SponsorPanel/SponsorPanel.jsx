@@ -15,6 +15,11 @@ function SponsorPanel() {
     <Fragment>
       <div id={"sponsorPanel"}>
         <div id={"panel"}>
+          <div>
+            <a className={"material-icons"} onClick={hideSponsorPanel}>
+              close
+            </a>
+          </div>
           <h1>SponsorUp</h1>
           <label>
             Are you an individual looking for boosts in connections or a company
@@ -23,10 +28,7 @@ function SponsorPanel() {
           <label>
             We have tailored sponsorship packages <i>just for you</i>.
           </label>
-          <div>
-            <a>Click here for more</a>
-            <a onClick={hideSponsorPanel}>Close</a>
-          </div>
+          <a>Click here for more</a>
         </div>
       </div>
     </Fragment>

@@ -5,7 +5,7 @@ import "./Marquee.css";
 
 function Marquee({ title, items }) {
   var slides = items.map((i) => (
-    <Fragment>
+    <Fragment key={i.name}>
       <div className="slide">
         <img src={i.image} alt={i.name} />
       </div>

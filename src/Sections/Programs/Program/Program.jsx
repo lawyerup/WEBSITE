@@ -62,7 +62,7 @@ function Program({ id, name, description, image, logo, released, button }) {
   var more;
   if (button) {
     more = (
-      <a href={button.link} target="_blank" className={"more"} id={id + "More"}>
+      <a href={button.link} className={"more"} id={id + "More"}>
         {button.text}
         <i className={"material-icons"}>arrow_forward</i>
       </a>

@@ -17,13 +17,14 @@ function Navigation() {
           LawyerUp
         </a>
         <div className="menu">
-          <a href="#story">Our Story</a>
-          <a href="#story">Our Partners</a>
-          <a href="#team">Our Team</a>
-          <a href="#reviews">Our Reviews</a>
-          <a href="#programs">Our Programs</a>
+          <a href="#story">Story</a>
+          <a href="#team">Team</a>
+          <a href="#reviews">Reviews</a>
+          <a href="#programs">Programs</a>
           <a href="#join">Join Us</a>
-          <a className={"sponsor"} onClick={showSponsorPanel}>Sponsor Us</a>
+          <a className={"sponsor"} onClick={showSponsorPanel}>
+            Sponsor Us
+          </a>
         </div>
       </nav>
     </Fragment>

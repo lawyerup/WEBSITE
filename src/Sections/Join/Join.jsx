@@ -8,76 +8,62 @@ import icon_email from "../../Images/icons/icon_email.svg";
 import icon_law from "../../Images/icons/icon_law.svg";
 
 function Join() {
-  const [form, setForm] = useState({
-    name: {
-      text: "",
-      valid: false,
-    },
-    email: {
-      text: "",
-      valid: false,
-    },
-    message: {
-      text: "",
-      valid: false,
-    },
+  const [name, setName] = useState({
+    text: "",
+    valid: false,
   });
 
-  function validateName() {
-    const element = document.getElementById("name");
+  const [email, setEmail] = useState({
+    text: "",
+    valid: false,
+  });
 
+  const [message, setMessage] = useState({
+    text: "",
+    valid: false,
+  });
+
+  function validateName(element) {
     var valid = element.value.length > 0 && element.value.includes(" ");
 
     document.getElementById("nameError").style.opacity = valid ? "0" : "1";
 
-    setForm({
-      ...form,
-      name: {
-        text: element.value,
-        valid: valid,
-      },
+    setName({
+      text: element.value,
+      valid: valid,
     });
   }
 
-  function validateEmail() {
-    const element = document.getElementById("email");
-
+  function validateEmail(element) {
     let re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
 
     var valid = re.test(element.value);
 
     document.getElementById("emailError").style.opacity = valid ? "0" : "1";
 
-    setForm({
-      ...form,
-      email: {
-        text: element.value,
-        valid: valid,
-      },
+    setEmail({
+      text: element.value,
+      valid: valid,
     });
   }
 
-  function validateMessage() {
-    const element = document.getElementById("message");
-
+  function validateMessage(element) {
     var valid = element.value.length > 0;
 
     document.getElementById("messageError").style.opacity = valid ? "0" : "1";
 
-    setForm({
-      ...form,
-      message: {
-        text: element.value,
-        valid: valid,
-      },
+    setMessage({
+      text: element.value,
+      valid: valid,
     });
   }
 
   function handleSubmit(e) {
     e.preventDefault();
-    console.log(form);
 
-    if (form.name.valid && form.email.valid && form.message.valid) {
+    if (name.valid && email.valid && message.valid) {
+      var form = { name: name.text, email: email.text, message: message.text };
+      console.log(form);
       fetch("http://localhost:3002/send", {
         method: "POST",
         body: JSON.stringify(form),
@@ -99,19 +85,17 @@ function Join() {
   }
 
   function resetForm() {
-    setForm({
-      name: {
-        text: "",
-        valid: false,
-      },
-      email: {
-        text: "",
-        valid: false,
-      },
-      message: {
-        text: "",
-        valid: false,
-      },
+    setName({
+      text: "",
+      valid: false,
+    });
+    setEmail({
+      text: "",
+      valid: false,
+    });
+    setMessage({
+      text: "",
+      valid: false,
     });
   }
 
@@ -127,16 +111,16 @@ function Join() {
               type="text"
               id="name"
               placeholder="Your name"
-              value={form.name.text}
-              onChange={validateName}
+              value={name.text}
+              onChange={(e) => validateName(e.currentTarget)}
             />
             <label id="nameError">Please enter your name</label>
             <input
               type="text"
               id="email"
               placeholder="Your email"
-              value={form.email.text}
-              onChange={validateEmail}
+              value={email.text}
+              onChange={(e) => validateEmail(e.currentTarget)}
             />
             <label id="emailError">Please enter a valid email</label>
             <textarea
@@ -144,34 +128,25 @@ function Join() {
               type="text"
               name="comment"
               placeholder="Type your message or question here..."
-              value={form.message.text}
-              onChange={validateMessage}
+              value={message.text}
+              onChange={(e) => validateMessage(e.currentTarget)}
             />
             <label id={"messageError"}>Please enter a message</label>
             <button type={"submit"}>Send</button>
           </form>
           <div className="links">
-            <a href={"mailto:lawyerupinternship@gmail.com"} target={"_blank"}>
+            <a href={"mailto:lawyerupinternship@gmail.com"}>
               <img src={icon_email} alt={"email"} />{" "}
               lawyerupinternship@gmail.com
             </a>
-            <a
-              href={"https://www.instagram.com/lawyerupinternship/?hl=en"}
-              target={"_blank"}
-            >
+            <a href={"https://www.instagram.com/lawyerupinternship/?hl=en"}>
               <img src={icon_instagram} alt={"instagram"} /> @lawyerupinternship
             </a>
-            <a
-              href={"http://www.linkedin.com/company/lawyerupinternship"}
-              target={"_blank"}
-            >
+            <a href={"http://www.linkedin.com/company/lawyerupinternship"}>
               <img src={icon_linkedin} alt={"linkedin"} />
               @LawyerUpInternship
             </a>
-            <a
-              href={"https://www.facebook.com/lawyerupinternship"}
-              target={"_blank"}
-            >
+            <a href={"https://www.facebook.com/lawyerupinternship"}>
               <img src={icon_facebook} alt={"facebook"} />
               @lawyerupinternship
             </a>
@@ -179,7 +154,6 @@ function Join() {
               href={
                 "https://docs.google.com/forms/d/e/1FAIpQLSf7PuyTBlem4UNkDa4Bknb6cfiG0_JBUTns0S0pqmiSxeUflg/viewform"
               }
-              target={"_blank"}
             >
               <img src={icon_law} alt={"apply"} />
               Apply to be an Intern or Scholar here!
@@ -188,25 +162,12 @@ function Join() {
         </div>
         <footer>
           Copyright &copy; 2020 LawyerUp | Developed by&nbsp;
-          <a
-            href={"https://www.linkedin.com/in/umeeshadalwis/"}
-            target={"_blank"}
-          >
+          <a href={"https://www.linkedin.com/in/umeeshadalwis/"}>
             Umeesha D'Alwis
           </a>
-          ,&nbsp;
-          <a
-            href={"https://www.linkedin.com/in/brettseverin/"}
-            target={"_blank"}
-          >
+          &nbsp;and&nbsp;
+          <a href={"https://www.linkedin.com/in/brettseverin/"}>
             Brett Severin
-          </a>
-          ,&nbsp;
-          <a
-            href={"https://www.linkedin.com/in/deepanshug4/"}
-            target={"_blank"}
-          >
-            Deepanshu Gupta
           </a>
         </footer>
       </div>

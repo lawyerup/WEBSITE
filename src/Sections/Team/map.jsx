@@ -1,4 +1,4 @@
-import React, { Fragment } from "react";
+import React from "react";
 
 import {
   northAmerica,
@@ -7,11 +7,7 @@ import {
   asia,
   africa,
   australia,
-  locations,
 } from "./map_locations";
-
-import Panel from "./Panel/Panel";
-import { team } from "./data";
 
 function Map() {
   const dot =
@@ -19,6 +15,7 @@ function Map() {
 
   const northAmericaMap = northAmerica.map((d) => (
     <path
+      key={"northamerica" + northAmerica.indexOf(d)}
       name="northamerica"
       transform={"translate(" + d.x + "," + d.y + ")"}
       d={dot}
@@ -27,6 +24,7 @@ function Map() {
 
   const southAmericaMap = southAmerica.map((d) => (
     <path
+      key={"southamerica" + southAmerica.indexOf(d)}
       name="southamerica"
       transform={"translate(" + d.x + "," + d.y + ")"}
       d={dot}
@@ -35,6 +33,7 @@ function Map() {
 
   const europeMap = europe.map((d) => (
     <path
+      key={"europe" + europe.indexOf(d)}
       name="europe"
       transform={"translate(" + d.x + "," + d.y + ")"}
       d={dot}
@@ -43,6 +42,7 @@ function Map() {
 
   const asiaMap = asia.map((d) => (
     <path
+      key={"asia" + asia.indexOf(d)}
       name="asia"
       transform={"translate(" + d.x + "," + d.y + ")"}
       d={dot}
@@ -51,6 +51,7 @@ function Map() {
 
   const africaMap = africa.map((d) => (
     <path
+      key={"africa" + africa.indexOf(d)}
       name="africa"
       transform={"translate(" + d.x + "," + d.y + ")"}
       d={dot}
@@ -59,6 +60,7 @@ function Map() {
 
   const australiaMap = australia.map((d) => (
     <path
+      key={"australia" + australia.indexOf(d)}
       name="australia"
       transform={"translate(" + d.x + "," + d.y + ")"}
       d={dot}
@@ -68,11 +70,11 @@ function Map() {
   var selectedContinent = "";
 
   function highlightContinent(id, color, force) {
-    if (selectedContinent == "") {
+    if (selectedContinent === "") {
       var dots = document.getElementsByName(id);
 
       for (const [index, value] of dots.entries()) {
-        value.style.fill = color;
+        if (index) value.style.fill = color;
       }
     }
   }
