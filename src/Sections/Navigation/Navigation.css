@@ -26,7 +26,7 @@ nav > .logo {
 }
 
 nav > .menu {
-    flex-basis: 70%;
+    flex-basis: 80%;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -37,8 +37,6 @@ nav > .menu > a {
     transition: background-color 0.5s ease-in-out, color 0.5s ease-in-out;
     padding: 1% 2%;
     text-transform: uppercase;
-    background-color: #202020;
-    box-shadow: 0 0 2.5px 1px black;
     flex-basis: 15%;
     text-decoration: none;
     color: #ececec;
@@ -47,6 +45,7 @@ nav > .menu > a {
     display: flex;
     align-items: center;
     justify-content: center;
+    border-radius: 1vw;
 }
 
 nav > .menu > a:hover {

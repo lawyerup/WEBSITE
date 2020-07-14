@@ -70,3 +70,9 @@
 #reviews > .reviews::-webkit-scrollbar {
   display: none;
 }
+
+@media screen and (max-width: 1000px) {
+  #reviews {
+    background-image: url("../../Images/backgrounds/reviews-mobile.png");
+  }
+}

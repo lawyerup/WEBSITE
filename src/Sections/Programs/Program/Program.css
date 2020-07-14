@@ -4,7 +4,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 30vw;
+  height: 35vw;
   flex-basis: 33%;
   background-size: 400%;
   color: white;
@@ -16,7 +16,7 @@
   align-items: center;
   flex-direction: column;
   justify-content: space-between;
-  padding: 3% 2% 2% 2%;
+  padding: 2% 2% 2% 2%;
 }
 
 .program:hover {
@@ -24,17 +24,33 @@
   background-size: 200%;
 }
 
+.program h1 {
+  transition: color 0.5s ease-in-out, font-size 0.5s ease-in-out;
+  margin: 0;
+  font-size: 3vw;
+  font-weight: 400;
+  color: transparent;
+  display: none;
+}
+
+.program img {
+  transition: opacity 0.5s ease-in-out;
+  width: 75%;
+}
+
 .program > .description {
   transition: color 0.5s ease-in-out, font-size 0.5s ease-in-out;
+  display: none;
   color: transparent;
-  font-size: 0vw;
   pointer-events: none;
+  font-size: 1.5vw;
   text-align: left;
   align-items: center;
   justify-content: top;
 }
 
-.program > .indicator, .program > i {
+.program > .indicator,
+.program > i {
   transition: color 0.5s ease-in-out, font-size 0.5s ease-in-out;
   font-size: 1vw;
   display: flex;
@@ -43,21 +59,47 @@
   pointer-events: none;
 }
 
+.program > .more {
+  transition: opacity 0.5s ease-in-out;
+  background-color: white;
+  top: 50px;
+  left: 50px;
+  color: black;
+  border-radius: 0.5vw;
+  font-size: 1vw;
+  padding: 2% 5%;
+  display: none;
+  opacity: 0;
+  justify-content: space-between;
+  align-items: center;
+  width: 50%;
+  text-decoration: none;
+  box-shadow: 0 0 5px 1px #202020;
+}
+
 @media screen and (max-width: 1000px) {
-    .program {
-      width: 75%;
-      background-size: 100%;
-    }
-
-    .program:hover {
-      background-size: 100%;
-    }
-
-    .program > .indicator {
-        font-size: 2vw;
-    }
-
-    .program > .description {
-        font-size: 1vw;
-    }
+  .program {
+    width: 75%;
+    background-size: 100%;
   }
+
+  .program:hover {
+    background-size: 100%;
+  }
+
+  .program > .indicator {
+    font-size: 2vw;
+  }
+
+  .program > .description {
+    font-size: 2vw;
+  }
+
+  .program > img {
+    width: 30%;
+  }
+
+  .program > .more {
+    font-size: 2.5vw;
+  }
+}

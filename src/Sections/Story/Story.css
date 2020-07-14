@@ -4,7 +4,7 @@
   align-items: center;
   justify-content: space-between;
   background-attachment: fixed;
-  background-image: url(story.jpg);
+  background-image: url(../../Images/backgrounds/story.jpg);
   padding: 2%;
   font-family: "Avenir", sans-serif;
   font-weight: 500;
@@ -19,7 +19,7 @@
 }
 
 #story > p {
-  font-size: max(1.5vw, 4vh);
+  font-size: 2vw;
   flex-basis: 70%;
   text-align: justify;
   text-align-last: left;

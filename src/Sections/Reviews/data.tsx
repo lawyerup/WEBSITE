@@ -1,3 +1,14 @@
+import anushka_gupta from "../../Images/people/anushka_gupta.png";
+import cassidi_mignuolo from "../../Images/people/cassidi_mignuolo.jpeg";
+import rhae_kamath from "../../Images/people/rhae_kamath.jpeg";
+import cynthia_vitolo from "../../Images/people/cynthia_vitolo.jpeg";
+import daisy_garcia from "../../Images/people/daisy_garcia.jpeg";
+import galila_assefa from "../../Images/people/galila_assefa.jpeg";
+import hesham_akhoon from "../../Images/people/hesham_akhoon.jpeg";
+import karishma_khosla from "../../Images/people/karishma_khosla.png";
+import linjing_yu from "../../Images/people/linjing_yu.jpeg";
+import zaquariya_patterson from "../../Images/people/zaquariya_patterson.jpeg"
+
 interface Review {
   text: String;
   name: String;
@@ -13,8 +24,7 @@ export const UserReviews: Review[] = [
     name: "Rhea Kamath",
     year: "20",
     id: "1",
-    image:
-      "https://media-exp1.licdn.com/dms/image/C5603AQGhc7zMI6IgpA/profile-displayphoto-shrink_400_400/0?e=1599696000&v=beta&t=oT6rni5HFE6cqR1MVIg6weMHQ3FeoAmfYb6WGa7lqaM",
+    image: rhae_kamath,
   },
   {
     text:
@@ -22,8 +32,7 @@ export const UserReviews: Review[] = [
     name: "Anushka Gupta",
     year: "20",
     id: "2",
-    image:
-      "https://media-exp1.licdn.com/dms/image/C5603AQGhc7zMI6IgpA/profile-displayphoto-shrink_400_400/0?e=1599696000&v=beta&t=oT6rni5HFE6cqR1MVIg6weMHQ3FeoAmfYb6WGa7lqaM",
+    image: anushka_gupta,
   },
   {
     text:
@@ -31,8 +40,7 @@ export const UserReviews: Review[] = [
     name: "Cassidi Mignoulo",
     year: "20",
     id: "3",
-    image:
-      "https://media-exp1.licdn.com/dms/image/C5603AQGhc7zMI6IgpA/profile-displayphoto-shrink_400_400/0?e=1599696000&v=beta&t=oT6rni5HFE6cqR1MVIg6weMHQ3FeoAmfYb6WGa7lqaM",
+    image: cassidi_mignuolo,
   },
   {
     text:
@@ -40,61 +48,47 @@ export const UserReviews: Review[] = [
     name: "Cynthia Vitolo",
     year: "20",
     id: "4",
-    image:
-      "https://media-exp1.licdn.com/dms/image/C5603AQGhc7zMI6IgpA/profile-displayphoto-shrink_400_400/0?e=1599696000&v=beta&t=oT6rni5HFE6cqR1MVIg6weMHQ3FeoAmfYb6WGa7lqaM",
-  },
+    image: cynthia_vitolo},
   {
     text:
       "Being able to hear from so many motivated lawyers about the realities of law alongside so many future lawyers has given me this new drive to better myself in all aspects. LawyerUp has given me a new burst of knowledge and I didn't even have to leave my home to receive that!",
     name: "Galila Assefa",
     year: "20",
     id: "5",
-    image:
-      "https://media-exp1.licdn.com/dms/image/C5603AQGhc7zMI6IgpA/profile-displayphoto-shrink_400_400/0?e=1599696000&v=beta&t=oT6rni5HFE6cqR1MVIg6weMHQ3FeoAmfYb6WGa7lqaM",
-  },
+    image: galila_assefa},
   {
     text:
       "I’m so lucky to be a part of the LawyerUp internship program! I had the fantastic opportunity to learn about the legal field in real life and interact with layers from multiple areas of law to find out what we are interested in. ScholarUp is another great platform for students to further their understanding in the legal system while sharpening professional skills such as communication and teamwork. Join LawyerUp and I promise you won’t regret it!",
     name: "Linjing Yu",
     year: "20",
     id: "6",
-    image:
-      "https://media-exp1.licdn.com/dms/image/C5603AQGhc7zMI6IgpA/profile-displayphoto-shrink_400_400/0?e=1599696000&v=beta&t=oT6rni5HFE6cqR1MVIg6weMHQ3FeoAmfYb6WGa7lqaM",
-  },
+    image: linjing_yu},
   {
     text:
       "LawyerUp is an amazing program that provides aspiring lawyers with the knowledge they need from working lawyers and professionals in the field. We are able to learn from a diverse group of people that have gone through many struggles and achieved great things throughout their career. It provides us with the unique insight into what being a lawyer in today's world is like. ",
     name: "Daisy Garcia",
     year: "20",
     id: "7",
-    image:
-      "https://media-exp1.licdn.com/dms/image/C5603AQGhc7zMI6IgpA/profile-displayphoto-shrink_400_400/0?e=1599696000&v=beta&t=oT6rni5HFE6cqR1MVIg6weMHQ3FeoAmfYb6WGa7lqaM",
-  },
+    image: daisy_garcia},
   {
     text:
       "LawyerUp and ScholarUP have given me the opportunity to interact with like minded individuals and attorneys on a personal level. I have received tips on how to write better, connect with attorneys, and improve my writing. This internship has provided me with more than I could have ever imagined!",
     name: "Zaquariya Patterson",
     year: "20",
     id: "8",
-    image:
-      "https://media-exp1.licdn.com/dms/image/C5603AQGhc7zMI6IgpA/profile-displayphoto-shrink_400_400/0?e=1599696000&v=beta&t=oT6rni5HFE6cqR1MVIg6weMHQ3FeoAmfYb6WGa7lqaM",
-  },
+    image: zaquariya_patterson},
   {
     text:
       "Coming across LawyerUp was the best thing that has happened to me during this pandemic. The exposure and insight I have received from each speaker during our zoom calls has really helped inform my decision with law school. Whether I go to law school or not, the people I’ve met and the knowledge everyone has shared will stay with me forever!",
     name: "Hesham Akhoon",
     year: "20",
     id: "9",
-    image:
-      "https://media-exp1.licdn.com/dms/image/C5603AQGhc7zMI6IgpA/profile-displayphoto-shrink_400_400/0?e=1599696000&v=beta&t=oT6rni5HFE6cqR1MVIg6weMHQ3FeoAmfYb6WGa7lqaM",
-  },
+    image: hesham_akhoon},
   {
     text:
-      "Coming across LawyerUp was the best thing that has happened to me during this pandemic. The exposure and insight I have received from each speaker during our zoom calls has really helped inform my decision with law school. Whether I go to law school or not, the people I’ve met and the knowledge everyone has shared will stay with me forever!",
-    name: "Hesham Akhoon",
+      "At the start of the CoVID-19 lockdown, I felt lost. It seemed as if I had no purpose. However, this internship gave me something to look forward to. Furthermore, the fact that it is a virtual internship made it accessible for anyone around the globe, including myself in the UK. LawyerUp gave me the opportunity to learn about several different areas of law - both broad and niche areas. I also created a virtual network with like-minded people as well as a platform to share new opportunities. I have learnt so much from the programme already and I look forward to what is still to come.",
+    name: "Karishma Khosla",
     year: "20",
     id: "10",
-    image:
-      "https://media-exp1.licdn.com/dms/image/C5603AQGhc7zMI6IgpA/profile-displayphoto-shrink_400_400/0?e=1599696000&v=beta&t=oT6rni5HFE6cqR1MVIg6weMHQ3FeoAmfYb6WGa7lqaM",
-  },
+    image: karishma_khosla},
 ];
