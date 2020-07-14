@@ -35,7 +35,7 @@
 
 #sponsorPanel > #panel > label {
   color: white;
-  font-size: 2.5vw;
+  font-size: 1.75vw;
   margin: 0 2.5%;
 }
 
@@ -52,7 +52,7 @@
   transition: background-color 0.5s ease-in-out;
   flex-basis: 40%;
   color: white;
-  font-size: 1.5vw;
+  font-size: 1.25vw;
   text-align: center;
   padding: 2.5%;
   border: 1px solid white;
@@ -70,14 +70,14 @@
     padding: 5% 1%;
   }
   #sponsorPanel > #panel > h1 {
-    font-size: 12vw;
+    font-size: 10vw;
   }
 
   #sponsorPanel > #panel > label {
-    font-size: 5vw;
+    font-size: 4vw;
   }
 
   #sponsorPanel > #panel > div > a {
-    font-size: 3vw;
+    font-size: 2.5vw;
   }
 }

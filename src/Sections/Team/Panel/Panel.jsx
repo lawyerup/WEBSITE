@@ -5,12 +5,12 @@ import icon_linkedin from "../../../Images/icons/icon_linkedin.svg";
 function Panel({ continent, directors }) {
   const id = continent.toLowerCase().replace(/\s/g, "") + "Panel";
   const directorList = directors.map((d) => (
-    <Fragment>
+    <Fragment key={d.name}>
       <div className="director">
         <img src={d.image} alt="test" />
         <div className="content">
           <h1>
-            {d.name} <a hidden={d.link ? false : true} target={"_blank"} href={d.link}><img src={icon_linkedin} alt={"linkedIn"} /></a>
+            {d.name} <a hidden={d.link ? false : true} href={d.link}><img src={icon_linkedin} alt={"linkedIn"} /></a>
           </h1>
           <label>{d.bio}</label>
         </div>

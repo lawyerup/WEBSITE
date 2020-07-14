@@ -45,7 +45,7 @@ function Programs() {
   ];
 
   const programs = data.map((p) => (
-    <Fragment>
+    <Fragment key={p.name}>
       <Program
         id={p.id}
         name={p.name}

@@ -6,7 +6,6 @@ import irene_ouyang from "../../Images/people/irene_ouyang.jpeg";
 import yashica_kataria from "../../Images/people/yashica_kataria.jpeg";
 import stacey_adongo from "../../Images/people/stacey_adongo.png";
 import umeesha_dalwis from "../../Images/people/umeesha_dalwis.jpeg";
-import { useContext } from "react";
 
 export const team = {
   founder: [

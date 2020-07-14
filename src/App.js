@@ -18,7 +18,6 @@ function App() {
       <main>
         <Landing />
         <Story />
-        <Affiliates />
         <Team />
         <Reviews />
         <Programs />

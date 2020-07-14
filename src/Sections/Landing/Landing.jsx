@@ -15,7 +15,6 @@ function Landing() {
           setVisibleSlogan(visibleSlogan += slogan[index]);
         }
         index++;
-        console.log(visibleSlogan);
       }, 200);
     }
   }
