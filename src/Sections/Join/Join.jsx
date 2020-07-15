@@ -99,7 +99,9 @@ function Join() {
     });
   }
 
-  function joinNewsletter() {}
+  function joinNewsletter() {
+    // Put newsletter popup code here
+  }
 
   return (
     <Fragment>
@@ -138,7 +140,7 @@ function Join() {
           </form> */}
         <div className="links">
           <div>
-            <a href={""}>
+            <a onClick={joinNewsletter}>
               <img src={icon_email} alt={"newsletter"} /> Join our newsletter!
             </a>
             <a

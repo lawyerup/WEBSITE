@@ -14,6 +14,13 @@ import SponsorPanel from "./Sections/SponsorPanel/SponsorPanel";
 function App() {
   return (
     <Fragment>
+      <script
+        type="text/javascript"
+        id="hs-script-loader"
+        async
+        defer
+        src="//js.hs-scripts.com/8100128.js"
+      ></script>
       <Navigation />
       <main>
         <Landing />

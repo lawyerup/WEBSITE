@@ -135,6 +135,7 @@
 }
 
 #join > .links > div > a:hover {
+  cursor: pointer;
   background-color: rgba(128, 0, 0, 0.658);
 }
 
