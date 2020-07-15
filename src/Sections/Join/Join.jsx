@@ -99,14 +99,16 @@ function Join() {
     });
   }
 
+  function joinNewsletter() {}
+
   return (
     <Fragment>
       <div id="join">
         <h1>Join Us</h1>
         <h2>Follow us on social media and join our program today!</h2>
 
-        <div className="content">
-          <form onSubmit={handleSubmit.bind(this)}>
+        {/* <div className="content"> */}
+        {/* <form onSubmit={handleSubmit.bind(this)}>
             <input
               type="text"
               id="name"
@@ -133,33 +135,44 @@ function Join() {
             />
             <label id={"messageError"}>Please enter a message</label>
             <button type={"submit"}>Send</button>
-          </form>
-          <div className="links">
-            <a href={"mailto:lawyerupinternship@gmail.com"}>
-              <img src={icon_email} alt={"email"} />{" "}
-              lawyerupinternship@gmail.com
-            </a>
-            <a href={"https://www.instagram.com/lawyerupinternship/?hl=en"}>
-              <img src={icon_instagram} alt={"instagram"} /> @lawyerupinternship
-            </a>
-            <a href={"http://www.linkedin.com/company/lawyerupinternship"}>
-              <img src={icon_linkedin} alt={"linkedin"} />
-              @LawyerUpInternship
-            </a>
-            <a href={"https://www.facebook.com/lawyerupinternship"}>
-              <img src={icon_facebook} alt={"facebook"} />
-              @lawyerupinternship
+          </form> */}
+        <div className="links">
+          <div>
+            <a href={""}>
+              <img src={icon_email} alt={"newsletter"} /> Join our newsletter!
             </a>
             <a
               href={
                 "https://docs.google.com/forms/d/e/1FAIpQLSf7PuyTBlem4UNkDa4Bknb6cfiG0_JBUTns0S0pqmiSxeUflg/viewform"
               }
             >
-              <img src={icon_law} alt={"apply"} />
-              Apply to be an Intern or Scholar here!
+              <img src={icon_law} alt={"intern"} />
+              @lawyerupinternship
+            </a>
+          </div>
+          <div>
+            <a href={"http://www.linkedin.com/company/lawyerupinternship"}>
+              <img src={icon_linkedin} alt={"linkedin"} />
+              @LawyerUpInternship
+            </a>
+            <a href={"https://www.instagram.com/lawyerupinternship/?hl=en"}>
+              <img src={icon_instagram} alt={"instagram"} /> @lawyerupinternship
+            </a>
+          </div>
+          <div>
+            <a href={"https://www.facebook.com/lawyerupinternship"}>
+              <img src={icon_facebook} alt={"facebook"} />
+              @lawyerupinternship
+            </a>
+
+            <a href={"mailto:lawyerupinternship@gmail.com"} target={"_blank"}>
+              <img src={icon_email} alt={"email"} />{" "}
+              lawyerupinternship@gmail.com
             </a>
           </div>
         </div>
+
+        {/* </div> */}
         <footer>
           Copyright &copy; 2020 LawyerUp | Developed by&nbsp;
           <a href={"https://www.linkedin.com/in/umeeshadalwis/"}>
