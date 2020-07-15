@@ -6,6 +6,7 @@ import icon_instagram from "../../Images/icons/icon_instagram.svg";
 import icon_facebook from "../../Images/icons/icon_facebook.svg";
 import icon_email from "../../Images/icons/icon_email.svg";
 import icon_law from "../../Images/icons/icon_law.svg";
+import icon_newsletter from "../../Images/icons/icon_newsletter.svg";
 
 function Join() {
   const [name, setName] = useState({
@@ -141,7 +142,7 @@ function Join() {
         <div className="links">
           <div>
             <a onClick={joinNewsletter}>
-              <img src={icon_email} alt={"newsletter"} /> Join our newsletter!
+              <img src={icon_newsletter} alt={"newsletter"} /> Join our newsletter!
             </a>
             <a
               href={
